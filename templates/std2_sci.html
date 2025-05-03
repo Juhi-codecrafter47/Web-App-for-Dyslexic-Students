@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science for Class 2</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }
+        .content-box { background-color: #fff; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 30px; position: relative; }
+        h1, h2 { color: #28a745; }
+        .btn-custom { font-size: 18px; padding: 10px 20px; border-radius: 10px; margin: 5px; }
+        .video-container { border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        .top-buttons { position: absolute; top: 20px; right: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 bg-white p-5 rounded shadow content-box">
+
+                <!-- TOP BUTTONS (RIGHT SIDE) -->
+                <div class="top-buttons">
+                    <button class="btn btn-success btn-custom" onclick="readText()">🔊 Read Aloud</button>
+                    <button class="btn btn-danger btn-custom" onclick="stopReading()">🛑 Stop</button>
+                </div>
+
+                <h1 class="text-center">Science for Class 2</h1>
+
+                <h2 class="text-center" >Plants and Their Needs</h2>
+                <div class="video-container mb-4">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/l7mXl-4TXmQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 25px;">Plants are living things that need certain things to grow healthy and strong. Let’s explore what plants need!</p> <ol style="font-size: 30px;"> <li><strong><span style="color: #4caf50;">Sunlight:</span></strong> Plants use sunlight to make their own food through <span style="color: #ff9800;">photosynthesis.</span> 🌞 </li> <li><strong><span style="color: #2196f3;">Water:</span></strong> Water helps plants stay fresh and carry nutrients from the soil to their leaves. 💧 </li> <li><strong><span style="color: #9c27b0;">Soil:</span></strong> Soil provides minerals and nutrients that plants need to grow strong. 🌿 </li>  </ol>
+                
+                <h2 class="text-center">Animals and Their Homes</h2>
+                <div class="video-container mb-4">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/-iO_LdNR_80" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 25px;">Just like humans live in houses, animals also have special homes that keep them safe and comfortable. Let’s learn where different animals live!</p> <ol style="font-size: 30px;"> <li><strong><span style="color: #e91e63;">🐕 Land Animals:</span></strong> Some animals live on land in forests, deserts, or grasslands. Example: - Lions live in a <span style="color: #ff9800;">den</span>. 🦁 - Rabbits live in a <span style="color: #4caf50;">burrow</span>. 🐰 </li>
+                  
+                    
+                <h2 class="text-center">The Human Body</h2>
+                <div class="video-container mb-4">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/i7cmUEfc644" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+                <p style="font-size: 25px;">The human body is an amazing system made up of different parts that work together to keep us healthy and strong. Let’s explore some important parts of the human body!</p> <ol style="font-size: 30px;"> <li><strong><span style="color: #4caf50;">Brain:</span></strong> The brain controls our thoughts, memory, and movements. It helps us think, learn, and feel emotions. 🧠</li> <li><strong><span style="color: #2196f3;">Heart:</span></strong> The heart pumps blood through our body, carrying oxygen and nutrients to keep us alive. ❤️</li> </ol>
+
+                <!-- BOTTOM BUTTONS (CENTERED) -->
+                <div class="text-center mt-4">
+                   
+                    <br><br>
+                    <button class="btn btn-primary btn-custom" onclick="window.location.href='std2_sci_quiz.html';">Take the Quiz</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let speechSynthesisUtterance;
+        
+        function readText() {
+            const contentBox = document.querySelector('.content-box');
+            const textElements = contentBox.querySelectorAll('h1, h2, p, li');
+            let fullText = '';
+
+            textElements.forEach(el => fullText += el.textContent + '. ');
+
+            speechSynthesisUtterance = new SpeechSynthesisUtterance(fullText);
+            speechSynthesisUtterance.pitch = 1;
+            speechSynthesisUtterance.rate = 1;
+            speechSynthesisUtterance.volume = 1;
+
+            window.speechSynthesis.speak(speechSynthesisUtterance);
+        }
+
+        function stopReading() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Quiz</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center text-purple">Spelling Quiz</h2>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+        <form id="quiz-form">
+            <!-- Quiz Questions -->
+            <div class="form-group">
+                <label for="question1">1. What is the correct spelling of the word that means "to write carelessly"?</label><br>
+                <input type="radio" name="question1" value="scibble"> Scibble<br>
+                <input type="radio" name="question1" value="scribble"> Scribble<br>
+                <input type="radio" name="question1" value="screbble"> Screbble<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question1')">Hint</button>
+                <p class="hint" id="hint-question1" style="display:none;">Remember it has a "b" in it, like "bubble".</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question2">2. How do you spell the word meaning "to make someone feel less sad"?</label><br>
+                <input type="radio" name="question2" value="confort"> Confort<br>
+                <input type="radio" name="question2" value="comfort"> Comfort<br>
+                <input type="radio" name="question2" value="comfert"> Comfert<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question2')">Hint</button>
+                <p class="hint" id="hint-question2" style="display:none;">It has the same letters as "fort" in the middle, helping you feel safe.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question3">3. Choose the correct spelling of the word that describes "an exciting and extraordinary event".</label><br>
+                <input type="radio" name="question3" value="specteacle"> Specteacle<br>
+                <input type="radio" name="question3" value="spectacle"> Spectacle<br>
+                <input type="radio" name="question3" value="spactacle"> Spactacle<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question3')">Hint</button>
+                <p class="hint" id="hint-question3" style="display:none;">Think of "spectators" who watch an amazing show.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question4">4. What is the correct spelling of the word meaning "the act of being brave"?</label><br>
+                <input type="radio" name="question4" value="bravery"> Bravery<br>
+                <input type="radio" name="question4" value="bravary"> Bravary<br>
+                <input type="radio" name="question4" value="braveery"> Braveery<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question4')">Hint</button>
+                <p class="hint" id="hint-question4" style="display:none;">It starts with "brave," just like being a superhero.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question5">5. Choose the correct spelling of the word meaning "to think about something carefully".</label><br>
+                <input type="radio" name="question5" value="consider"> Consider<br>
+                <input type="radio" name="question5" value="considder"> Considder<br>
+                <input type="radio" name="question5" value="considar"> Considar<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question5')">Hint</button>
+                <p class="hint" id="hint-question5" style="display:none;">Remember the "s" after the "con"; it helps you "consider" your choices.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question6">6. What is the correct spelling of the word meaning "to come close to something"? </label><br>
+                <input type="radio" name="question6" value="near"> Near<br>
+                <input type="radio" name="question6" value="neer"> Neer<br>
+                <input type="radio" name="question6" value="nare"> Nare<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question6')">Hint</button>
+                <p class="hint" id="hint-question6" style="display:none;">Think of "nearby" when you're close to something.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question7">7. Choose the correct spelling of the word that means "not fast".</label><br>
+                <input type="radio" name="question7" value="slow"> Slow<br>
+                <input type="radio" name="question7" value="slo"> Slo<br>
+                <input type="radio" name="question7" value="sloo"> Sloo<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question7')">Hint</button>
+                <p class="hint" id="hint-question7" style="display:none;">This word has an "w" to remind you to take it easy.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question8">8. What is the correct spelling of the word meaning "a skill or ability"? </label><br>
+                <input type="radio" name="question8" value="skill"> Skill<br>
+                <input type="radio" name="question8" value="skil"> Skil<br>
+                <input type="radio" name="question8" value="skilll"> Skilll<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question8')">Hint</button>
+                <p class="hint" id="hint-question8" style="display:none;">Think of "skillful," which has the same root.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question9">9. Choose the correct spelling of the word that describes a habitual action.</label><br>
+                <input type="radio" name="question9" value="routine"> Routine<br>
+                <input type="radio" name="question9" value="routene"> Routene<br>
+                <input type="radio" name="question9" value="routien"> Routien<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question9')">Hint</button>
+                <p class="hint" id="hint-question9" style="display:none;">Think of "routine" as your daily plan, it has a "t" in it.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question10">10. What is the correct spelling of the word meaning "to make a mistake"? </label><br>
+                <input type="radio" name="question10" value="eror"> Eror<br>
+                <input type="radio" name="question10" value="error"> Error<br>
+                <input type="radio" name="question10" value="erro"> Erro<br>
+                <button type="button" class="btn btn-link" onclick="showHint('question10')">Hint</button>
+                <p class="hint" id="hint-question10" style="display:none;">Remember it has two "r's" like "red flags" for mistakes.</p>
+            </div>
+
+            <button type="button" class="btn btn-primary mt-4" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="result" class="text-center mt-4"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="quiz.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

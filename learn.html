@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
+    <link rel="stylesheet" href="learn.css">
+    
+    <nav>
+        <a href="/MINI%20PROJECT/Home.php">Home</a>
+        <a href="/MINI%20PROJECT/aboutdy.html">About Dyslexia</a>
+        <a href="/MINI%20PROJECT/learn.html">Learn</a>
+        <a href="/MINI%20PROJECT/progress.html">Your Progress</a>
+        <a href="/MINI%20PROJECT/about.html">About Us</a>
+        <a href="/MINI%20PROJECT/signup.html"><button class="login-btn">Login to learn</button></a>
+    </nav>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2>Start Learning, Keep Growing!</h2>
+            <input type="text" id="search-bar" placeholder="Search...">
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Subject Categories -->
+        <section class="subject-categories">
+            <h2>Subjects</h2>
+            <div class="subject-grid">
+                <a href="english.html" style="text-decoration: none;">
+                    <div class="subject-card" onclick="showSubject('english');">  <!--('<?php echo htmlspecialchars($_SESSION['username']); ?>', 123)-->
+                      <img src="eng.jpg" alt="English">
+                      <h3>English</h3>
+                   </div>
+                </a>
+                <div class="subject-card" onclick="showSubject('maths')">
+                    <img src="math.png" alt="Maths">
+                    <h3>Maths</h3>
+                </div>
+                <div class="subject-card" onclick="showSubject('science')">
+                    <img src="science.png" alt="Science">
+                    <h3>Science</h3>
+                </div>
+                <div class="subject-card" onclick="showSubject('history')">
+                    <img src="history.jpg" alt="History">
+                    <h3>History</h3>
+                </div>
+                <div class="subject-card" onclick="showSubject('geography')">
+                    <img src="geog.png" alt="Geography">
+                    <h3>Geography</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subject-Specific Content (hidden by default) -->
+        <section id="subject-content" class="hidden">
+            <h2 id="subject-title"></h2>
+            <div class="content-grid">
+                <div class="learning-card">
+                    <h4>Lesson 1: Introduction</h4>
+                    <p>Start learning the basics.</p>
+                    <button class="action-btn">Start Lesson</button>
+                </div>
+                <div class="learning-card">
+                    <h4>Lesson 2: Intermediate Topics</h4>
+                    <p>Learn intermediate topics in this subject.</p>
+                    <button class="action-btn">Start Lesson</button>
+                </div>
+                <div class="learning-card">
+                    <h4>Lesson 3: Advanced Topics</h4>
+                    <p>Dive into advanced topics to master the subject.</p>
+                    <button class="action-btn">Start Lesson</button>
+                </div>
+            </div>
+            <button onclick="goBack()" class="back-btn">Back to Subjects</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BrightMinds. All rights reserved.</p>
+    </footer>
+
+    <script src="learn.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English for Class 2</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }
+        .content-box { background-color: #fff; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 30px; position: relative; }
+        h1, h2 { color: #007bff; }
+        .btn-custom { font-size: 18px; padding: 10px 20px; border-radius: 10px; margin: 5px; }
+        .video-container { border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        .top-buttons { position: absolute; top: 20px; right: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 bg-white p-5 rounded shadow content-box">
+
+                <!-- TOP BUTTONS (RIGHT SIDE) -->
+                <div class="top-buttons">
+                    <button class="btn btn-success btn-custom" onclick="readText()">🔊 Read Aloud</button>
+                    <button class="btn btn-danger btn-custom" onclick="stopReading()">🛑 Stop</button>
+                </div>
+
+                <h1 class="text-center">English for Class 2</h1>
+
+                <h2 class="text-center">Nouns</h2>
+                <div class="video-container mb-4">
+                    <iframe width="100%" height="400px" 
+        src="https://www.youtube.com/embed/CMMZhAANKoM?rel=0" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+                </div>
+                <p style="font-size: 25px;">A noun is a <strong>naming word</strong>. It names a <strong>person, place, animal, or thing</strong>. Let's see some examples:</p>
+                <ol style="font-size: 30px;">
+                    <li><strong><span style="color: #4caf50;">Person:</span></strong> <strong>Teacher, Doctor, John</strong> 👩‍🏫👨‍⚕️</li>
+                    <li><strong><span style="color: #2196f3;">Place:</span></strong> <strong>School, Park, City</strong> 🏫🏙️</li>
+                    <li><strong><span style="color: #ff9800;">Animal:</span></strong> <strong>Dog, Lion, Elephant</strong> 🐶🦁</li>
+                    <li><strong><span style="color: #e91e63;">Thing:</span></strong> <strong>Book, Chair, Ball</strong> 📚🪑</li>
+                </ol>
+
+                <h2 class="text-center">Verbs</h2>
+                <div class="video-container mb-4">
+                    <iframe width="100%" height="400px" 
+                        src="https://www.youtube.com/embed/Y7_ucipnYKQ?rel=0" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="font-size: 25px;">A <strong>verb</strong> is an <strong>action word</strong>. It tells us what someone <strong>does</strong>. Examples of verbs:</p>
+                <ol style="font-size: 30px;">
+                    <li><strong><span style="color: #e91e63;">Jump:</span></strong> The boy <strong>jumps</strong> high. 🏃‍♂️</li>
+                    <li><strong><span style="color: #ff9800;">Read:</span></strong> She <strong>reads</strong> a book. 📖</li>
+                    <li><strong><span style="color: #4caf50;">Sing:</span></strong> They <strong>sing</strong> a song. 🎤</li>
+                </ol>
+
+                <h2 class="text-center">Sentence Formation</h2>
+                <div class="video-container mb-4">
+                    <iframe width="100%" height="400px" 
+                    src="https://www.youtube.com/embed/hQ1OwYu4GsY?rel=0" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="font-size: 25px;">Sentences <strong>tell us something</strong>. A sentence <strong>starts with a capital letter</strong> and <strong>ends with a full stop (.)</strong>. Let's practice:</p>
+                <ol style="font-size: 30px;">
+                    <li><strong><span style="color: #4caf50;">Example 1:</span></strong> The cat <strong>sleeps</strong> on the mat. 🐱</li>
+                    <li><strong><span style="color: #2196f3;">Example 2:</span></strong> John <strong>plays</strong> with his dog. 🐶</li>
+                    <li><strong><span style="color: #ff9800;">Example 3:</span></strong> I <strong>like</strong> to eat apples. 🍏</li>
+                </ol>
+
+                <!-- BOTTOM BUTTONS (CENTERED) -->
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary btn-custom" onclick="window.location.href='std2_eng_quiz.html';">Take the Quiz</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let speechSynthesisUtterance;
+        
+        function readText() {
+            const contentBox = document.querySelector('.content-box');
+            const textElements = contentBox.querySelectorAll('h1, h2, p, li');
+            let fullText = '';
+
+            textElements.forEach(el => fullText += el.textContent + '. ');
+
+            speechSynthesisUtterance = new SpeechSynthesisUtterance(fullText);
+            speechSynthesisUtterance.pitch = 1;
+            speechSynthesisUtterance.rate = 0.9;
+            speechSynthesisUtterance.volume = 1;
+
+            window.speechSynthesis.speak(speechSynthesisUtterance);
+        }
+
+        function stopReading() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+        }
+    </script>
+</body>
+</html>

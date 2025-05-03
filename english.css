@@ -1,0 +1,117 @@
+body, h1, h2, h3, h4, p, button {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+nav {
+    display: flex;
+    justify-content: space-between; /* Ensures the content is spaced out */
+    align-items: center; /* Vertically centers the content */
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #a1d6b2;
+    border-radius: 7px;
+}
+
+nav > a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f1f3c2;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav > a:not(:last-child) {
+    margin-right: 20px; /* Adds spacing between all nav links except the login button */
+}
+
+nav > a:last-child {
+    margin-left: auto; /* Pushes the login button to the far right */
+}
+
+.login-btn {
+    width: 200px;
+    background-color: #cedf9f;
+    color: aliceblue;
+    padding: 10px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: medium;
+    transition: ease-in-out;
+}
+
+.login-btn:hover {
+    width: 230px;
+    cursor: pointer;
+    background-color: mediumaquamarine;
+}
+
+/* Header */
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    margin: 0;
+    color: #333;
+}
+
+header #search-bar {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Facts Section */
+.facts {
+    background-color: #e6f7ff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.facts h3 {
+    color: #0059b3;
+    margin-bottom: 10px;
+}
+
+.facts p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Video Lessons */
+.lessons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.lessons video {
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.lessons h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+

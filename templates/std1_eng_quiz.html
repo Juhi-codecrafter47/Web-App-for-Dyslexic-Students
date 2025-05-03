@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonics Quiz</title>
+    <header class="p-3">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/home.html" class="d-flex align-items-center mb-2 mb-lg-0">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="../Home.php" class="nav-link px-2">Home</a></li>
+              <li><a href="aboutdy.html" class="nav-link px-2">About Dyslexia</a></li>
+              <li><a href="speech.html" class="nav-link px-2">Speech</a></li>
+              <li><a href="homepage.html" class="nav-link px-2">Learn</a></li>
+              <li><a href="about.html" class="nav-link px-2">About Us</a></li>
+            </ul>
+            <div class="text-end">
+              <button type="button" class="btn custom-login">Login</button>
+              <button type="button" class="btn custom-signup">Sign-up</button>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .btn-custom {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .result {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .text-left {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 quiz-container">
+                <h1 class="text-primary text-center">Phonics Quiz</h1>
+                <p class="lead text-center">Test your knowledge on letters, sounds, words, and sentences!</p>
+                
+                <!-- Quiz Questions -->
+                <form id="quizForm" class="text-left">
+                    <!-- Question 1 -->
+                    <div class="mb-4">
+                        <input type="hidden" id="lesson-id" value="2">
+                        
+                        <h4>1. How many letters are in the alphabet?</h4>
+                        <input type="radio" name="q1" value="24"> 24<br>
+                        <input type="radio" name="q1" value="25"> 25<br>
+                        <input type="radio" name="q1" value="26"> 26<br>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="mb-4">
+                        <h4>2. What sound does the letter 'A' make?</h4>
+                        <input type="radio" name="q2" value="o"> "o" like in "orange"<br>
+                        <input type="radio" name="q2" value="a"> "a" like in "apple"<br>
+                        <input type="radio" name="q2" value="e"> "e" like in "elephant"<br>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="mb-4">
+                        <h4>3. Which of these is a real word?</h4>
+                        <input type="radio" name="q3" value="xzp"> xzp<br>
+                        <input type="radio" name="q3" value="dog"> dog<br>
+                        <input type="radio" name="q3" value="trg"> trg<br>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="mb-4">
+                        <h4>4. What is a simple sentence?</h4>
+                        <input type="radio" name="q4" value="The cat is fat."> The cat is fat.<br>
+                        <input type="radio" name="q4" value="Apple ball jump run."> Apple ball jump run.<br>
+                        <input type="radio" name="q4" value="Sdfg hjkl qwer."> Sdfg hjkl qwer.<br>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="mb-4">
+                        <h4>5. What is the correct spelling?</h4>
+                        <input type="radio" name="q5" value="kat"> kat<br>
+                        <input type="radio" name="q5" value="cat"> cat<br>
+                        <input type="radio" name="q5" value="cta"> cta<br>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="mb-4">
+                        <h4>6. Which letter comes after 'D'?</h4>
+                        <input type="radio" name="q6" value="E"> E<br>
+                        <input type="radio" name="q6" value="F"> F<br>
+                        <input type="radio" name="q6" value="G"> G<br>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="mb-4">
+                        <h4>7. What sound does 'B' make?</h4>
+                        <input type="radio" name="q7" value="buh"> "buh" like in "bat"<br>
+                        <input type="radio" name="q7" value="duh"> "duh" like in "dog"<br>
+                        <input type="radio" name="q7" value="muh"> "muh" like in "moon"<br>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="mb-4">
+                        <h4>8. What is the last letter of the alphabet?</h4>
+                        <input type="radio" name="q8" value="X"> X<br>
+                        <input type="radio" name="q8" value="Y"> Y<br>
+                        <input type="radio" name="q8" value="Z"> Z<br>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="mb-4">
+                        <h4>9. What is a vowel?</h4>
+                        <input type="radio" name="q9" value="B"> B<br>
+                        <input type="radio" name="q9" value="E"> E<br>
+                        <input type="radio" name="q9" value="R"> R<br>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="mb-4">
+                        <h4>10. What word starts with the letter 'M'?</h4>
+                        <input type="radio" name="q10" value="Dog"> Dog<br>
+                        <input type="radio" name="q10" value="Mouse"> Mouse<br>
+                        <input type="radio" name="q10" value="Sun"> Sun<br>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="button" class="btn btn-primary btn-custom" onclick="checkAnswers()">Submit</button>
+                </form>
+
+                <!-- Result Display -->
+                <div id="result" class="mt-4 text-center"></div>
+
+                <!-- Back Button -->
+                <div class="mt-3 text-center">
+                    <a href="../templates/std1_eng.html" class="btn btn-secondary btn-custom">Back to Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Quiz Logic -->
+    <?php
+     session_start();
+     if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+      die("Error: User is not logged in or session expired.");
+     }
+    ?>
+    <script>
+         let userId = null;
+         fetch('../get_user_id.php')
+         .then(response => response.json())
+         .then(data => {
+           userId = data.user_id;
+           console.log("Fetched user ID:", userId);
+         })
+         .catch(error => console.error('Error fetching user ID:', error));
+
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = 10;
+
+            // Correct answers
+            const answers = {
+                q1: "26",
+                q2: "a",
+                q3: "dog",
+                q4: "The cat is fat.",
+                q5: "cat",
+                q6: "E",
+                q7: "buh",
+                q8: "Z",
+                q9: "E",
+                q10: "Mouse"
+            };
+            const lessonIdElement = document.getElementById('lesson-id');
+            let lessonId = lessonIdElement ? parseInt(lessonIdElement.value, 10) : 0;
+            if (!lessonId || lessonId === 0) {
+            console.error("Error: Lesson ID is missing or invalid.");
+            return; // Stop execution if lesson ID is invalid
+            }
+            // Get user answers
+            for (let key in answers) {
+                const selected = document.querySelector('input[name="' + key + '"]:checked');
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
+            }
+
+            // Display result
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<p class="result">You scored ${score} out of ${totalQuestions}!</p>`;
+
+            if (score === totalQuestions) {
+                resultDiv.innerHTML += `<p class="text-success">🎉 Excellent! You got everything right!</p>`;
+            } else if (score >= 6) {
+                resultDiv.innerHTML += `<p class="text-warning">👍 Good job! Keep practicing!</p>`;
+            } else {
+                resultDiv.innerHTML += `<p class="text-danger">❌ Keep trying! Review the material and try again.</p>`;
+            }
+            console.log("Submitting quiz...")
+        fetch('../store_quiz_result.php', {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+         body: `user_id=${encodeURIComponent(userId)}&lesson_id=${lessonId}&score=${score}&total_questions=${totalQuestions}`
+        })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data); // Handle response from PHP (for debugging)
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+        
+        
+    </script>
+</body>
+</html>

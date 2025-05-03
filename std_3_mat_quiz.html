@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>std_3_mat_quiz.html</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }
+        .quiz-container { background-color: #fff; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 30px; }
+        .btn-custom { font-size: 20px; padding: 10px 20px; border-radius: 10px; }
+        .result { font-size: 22px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center quiz-container">
+                <h1 class="text-primary">Class 3 Mathematics Quiz</h1>
+                <p class="lead">Test your knowledge of numbers, multiplication, division, and fractions!</p>
+                
+                <form id="quizForm">
+                    <div class="mb-4">
+                        <h4>1. What is 15 ÷ 3?</h4>
+                        <input type="radio" name="q1" value="3"> 3<br>
+                        <input type="radio" name="q1" value="5"> 5<br>
+                        <input type="radio" name="q1" value="6"> 6<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>2. What is 4 × 6?</h4>
+                        <input type="radio" name="q2" value="20"> 20<br>
+                        <input type="radio" name="q2" value="24"> 24<br>
+                        <input type="radio" name="q2" value="26"> 26<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>3. What fraction of a pizza is left if you eat 3 out of 8 slices?</h4>
+                        <input type="radio" name="q3" value="3/8"> 3/8<br>
+                        <input type="radio" name="q3" value="5/8"> 5/8<br>
+                        <input type="radio" name="q3" value="8/8"> 8/8<br>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary btn-custom" onclick="checkAnswers()">Submit</button>
+                </form>
+                
+                <div id="result" class="mt-4"></div>
+                <div class="mt-3">
+                    <a href="std_3_mat.html" class="btn btn-secondary btn-custom">Back to Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answers = { q1: "5", q2: "24", q3: "5/8" };
+            
+            for (let key in answers) {
+                const selected = document.querySelector('input[name="' + key + '"]:checked');
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
+            }
+            
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<p class="result">You scored ${score} out of 3!</p>`;
+        }
+    </script>
+</body>
+</html>

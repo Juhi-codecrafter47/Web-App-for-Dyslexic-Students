@@ -1,0 +1,281 @@
+.p-3 {
+    background-color: #a1d6b2;
+
+}
+.nav a{
+    display: flex;
+    gap: 30px;
+    color: #e8e97f;
+    font-size: 20px;
+    
+}
+.nav li {
+    margin-right: 20px; /* Adjust spacing as needed */
+}
+.btn-outline-light {
+    color: #f1f3c2;
+    border-color: black !important;
+}
+.custom-login {
+    background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+    color: white !important;
+    border-radius: 25px;
+    width: 100px;
+}   
+.custom-signup {
+    background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+    color: white !important;
+    border-radius: 25px;
+    width: 100px;
+}
+/* Ensure the body background image covers the viewport */
+body {
+    /* background: url('./bg.png') no-repeat center center fixed; */
+    font-family: 'Open Dyslexic', sans-serif;
+    background-size: cover;
+    font-family: 'Verdana', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Proper styling for container-fluid */
+.container-fluid {
+    width: 100%;
+    background-color: rgba(255, 228, 196, 0.8); /* Semi-transparent blanchedalmond */
+    flex: 1; /* This pushes the footer to the bottom */
+
+}
+/* General Section Styling */
+.section {
+    padding: 60px 20px;
+    margin: 30px 0px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Different Background Colors for Each Section */
+.dyslexia-section {
+    background-color: #f7e6c4; /* Light beige */
+}
+
+.help-section {
+    background-color: #f7e6c4; /* Light green */
+}
+
+/* Section Titles & Text */
+.section-title {
+    color: #4a4a4a;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.section-text {
+    color: #5a5a5a;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Flexbox for Image and Text */
+
+
+/* Section Images */
+.section-img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    /* padding: 10px; */
+    border: 2px solid black;
+    background-color: white;
+}
+
+/* Ensure different text-image layouts */
+.dyslexia-section .content-wrapper {
+    flex-direction: row;
+}
+
+
+.help-section .content-wrapper {
+    flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-img {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Flexbox for wrapping text around image */
+.content-wrapper {
+    /* margin: 50px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 50px; /* Space between image and text */
+}
+
+/* Ensure the image stays to the left */
+.content-wrapper img {
+    border-left: 20px;
+    max-width: 40%; /* Adjust width as needed */
+    height: auto;
+    border-radius: 25px;
+    border: 2px solid black;
+    float: left; /* Ensures text wraps around */
+}
+
+/* Ensure text wraps around the image */
+.text-content {
+    flex: 1; /* Allows text to take up remaining space */
+    text-align: left; /* Aligns text to the left */
+    border: 10px;
+}
+
+h1.display-5.fw-bold.text-body-emphasis {
+    color: #e8b86d !important;
+}
+
+
+.text-content h1 {
+    color: #e8b86d !important;
+}
+
+.text-content p {
+    color: #e8b86d !important;
+}
+
+.lead.mb-4 {
+    color: #e8b86d !important;
+}
+
+
+/* Footer fixes */
+footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensures it stays at the bottom */
+}
+
+
+  
+
+/* Popup Title and Content */
+.popup-content > h2 {
+    color: #6a994e; /* Changed to a more visible green */
+    font-size: 26px; /* Slightly larger for emphasis */
+    font-weight: bold;
+    text-align: center;
+}
+
+.popup-content > p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Popup Box */
+.popup {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Popup Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #e63946; /* Red close button */
+}
+
+.close-button:hover {
+    color: #c1121f;
+}
+
+/* Popup Button */
+.popup-button {
+    background-color: #ffb703;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.popup-button:hover {
+    background-color: #fb8500;
+}
+
+/* Updated Show Fun Fact! Button */
+.btn-outline-secondary {
+    background-color: #e8b86d; /* Matches original theme */
+    color: white;
+    border-color: #e8b86d;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: chocolate; /* Darker effect on hover */
+    border-color: chocolate;
+}
+
+/* Floating Open Button (if needed elsewhere) */
+.open-button {
+    background-color: #e8b86d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    z-index: 1001; 
+    top: 170px;
+    transition: background 0.3s;
+}
+
+.open-button:hover {
+    background-color: chocolate;
+}
+/* Apply rounded corners to images */
+header, footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Keep a light background */
+    position: relative;
+    z-index: 2; /* Ensure they stay above the background */
+}

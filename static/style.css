@@ -1,0 +1,86 @@
+.p-3 {
+    background-color: #a1d6b2;
+
+}
+.nav a{
+    display: flex;
+    gap: 30px;
+    color: #e8e97f;
+    font-size: 20px;
+    
+}
+.nav li {
+    margin-right: 20px; /* Adjust spacing as needed */
+}
+.btn-outline-light {
+    color: #f1f3c2;
+    border-color: black !important;
+}
+.custom-login {
+    background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+    color: white !important;
+    border-radius: 25px;
+    width: 100px;
+}   
+.custom-signup {
+    background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+    color: white !important;
+    border-radius: 25px;
+    width: 100px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: #6a994e;
+    color: white;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Section Styling */
+h1, h2 {
+    color: #6a994e;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: #6a994e;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+}

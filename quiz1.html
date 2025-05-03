@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center text-purple">Math Quiz</h2>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+        <form id="quiz-form">
+            <!-- Quiz Questions -->
+            <div class="form-group">
+                <label for="question1">1. What is the value of \( 8 + 7 \)?</label><br>
+                <span class="answer"><input type="radio" name="question1" value="12"> 12</span><br>
+                <span class="answer"><input type="radio" name="question1" value="15"> 15</span><br>
+                <span class="answer"><input type="radio" name="question1" value="16"> 16</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question1')">Hint</button>
+                <p class="hint" id="hint-question1" style="display:none;">Think about how many fingers you would use to count to 15.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question2">2. What is \( 5 \times 6 \)?</label><br>
+                <span class="answer"><input type="radio" name="question2" value="30"> 30</span><br>
+                <span class="answer"><input type="radio" name="question2" value="36"> 36</span><br>
+                <span class="answer"><input type="radio" name="question2" value="24"> 24</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question2')">Hint</button>
+                <p class="hint" id="hint-question2" style="display:none;">It’s the same as adding 5 together 6 times.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question3">3. What is \( 15 - 9 \)?</label><br>
+                <span class="answer"><input type="radio" name="question3" value="5"> 5</span><br>
+                <span class="answer"><input type="radio" name="question3" value="6"> 6</span><br>
+                <span class="answer"><input type="radio" name="question3" value="7"> 7</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question3')">Hint</button>
+                <p class="hint" id="hint-question3" style="display:none;">Subtracting means taking away.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question4">4. What is the square of \( 4 \)?</label><br>
+                <span class="answer"><input type="radio" name="question4" value="16"> 16</span><br>
+                <span class="answer"><input type="radio" name="question4" value="8"> 8</span><br>
+                <span class="answer"><input type="radio" name="question4" value="12"> 12</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question4')">Hint</button>
+                <p class="hint" id="hint-question4" style="display:none;">Think of \( 4 \times 4 \).</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question5">5. If a triangle has a base of 5 cm and a height of 12 cm, what is its area?</label><br>
+                <span class="answer"><input type="radio" name="question5" value="30"> 30 cm²</span><br>
+                <span class="answer"><input type="radio" name="question5" value="60"> 60 cm²</span><br>
+                <span class="answer"><input type="radio" name="question5" value="24"> 24 cm²</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question5')">Hint</button>
+                <p class="hint" id="hint-question5" style="display:none;">Use the formula: Area = \( \frac{1}{2} \times \text{base} \times \text{height} \).</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question6">6. What is \( 9 \div 3 \)?</label><br>
+                <span class="answer"><input type="radio" name="question6" value="3"> 3</span><br>
+                <span class="answer"><input type="radio" name="question6" value="6"> 6</span><br>
+                <span class="answer"><input type="radio" name="question6" value="12"> 12</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question6')">Hint</button>
+                <p class="hint" id="hint-question6" style="display:none;">You are splitting \( 9 \) into \( 3 \) equal parts.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question7">7. What is \( 7^2 \)?</label><br>
+                <span class="answer"><input type="radio" name="question7" value="49"> 49</span><br>
+                <span class="answer"><input type="radio" name="question7" value="14"> 14</span><br>
+                <span class="answer"><input type="radio" name="question7" value="42"> 42</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question7')">Hint</button>
+                <p class="hint" id="hint-question7" style="display:none;">It’s the same as multiplying \( 7 \) by itself.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question8">8. What is the value of \( 2 + 3 \times 4 \)?</label><br>
+                <span class="answer"><input type="radio" name="question8" value="14"> 14</span><br>
+                <span class="answer"><input type="radio" name="question8" value="20"> 20</span><br>
+                <span class="answer"><input type="radio" name="question8" value="12"> 12</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question8')">Hint</button>
+                <p class="hint" id="hint-question8" style="display:none;">Remember the order of operations: PEMDAS (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction).</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question9">9. If a rectangle has a length of 10 cm and a width of 5 cm, what is its perimeter?</label><br>
+                <span class="answer"><input type="radio" name="question9" value="30"> 30 cm</span><br>
+                <span class="answer"><input type="radio" name="question9" value="40"> 40 cm</span><br>
+                <span class="answer"><input type="radio" name="question9" value="50"> 50 cm</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question9')">Hint</button>
+                <p class="hint" id="hint-question9" style="display:none;">Use the formula: Perimeter = \( 2 \times (\text{length} + \text{width}) \).</p>
+            </div>
+
+            <div class="form-group">
+                <label for="question10">10. What is \( 100 - 25 + 10 \)?</label><br>
+                <span class="answer"><input type="radio" name="question10" value="85"> 85</span><br>
+                <span class="answer"><input type="radio" name="question10" value="75"> 75</span><br>
+                <span class="answer"><input type="radio" name="question10" value="90"> 90</span><br>
+                <button type="button" class="btn btn-link" onclick="showHint('question10')">Hint</button>
+                <p class="hint" id="hint-question10" style="display:none;">Follow the order of operations to find the answer.</p>
+            </div>
+
+            <button type="button" class="btn btn-primary mt-4" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="result" class="text-center mt-4"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="quiz1.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

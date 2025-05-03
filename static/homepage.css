@@ -1,0 +1,320 @@
+/* General Body Styles */
+html, body {
+  height: 100%;;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.p-3 {
+  background-color: #a1d6b2;
+
+}
+.nav a{
+  display: flex;
+  gap: 30px;
+  color: #e8e97f;
+  font-size: 20px;
+  font-family: 'poppins', sans-serif !important;
+  
+}
+.nav li {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+.btn-outline-light {
+  color: #f1f3c2;
+  border-color: black !important;
+}
+.custom-login {
+  background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+  color: white !important;
+  border-radius: 25px;
+  width: 100px;
+}   
+.custom-signup {
+  background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+  color: white !important;
+  border-radius: 25px;
+  width: 100px;
+}
+
+.search-bar {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.search-bar h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for the search container */
+#search-input {
+  width: 700px;
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+#search-input:focus {
+  border-color: #f1f3c2;
+  box-shadow: 0 0 8px rgba(95, 130, 21, 0.5);
+}
+
+/* Styling for the search button */
+#search-button {
+  padding: 20px 15px;
+  font-size: 20px;
+  color: white;
+  background-color: #f1f3c2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the error message */
+#error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Styling for search results */
+#results {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Top Section: Floating Signs and Character */
+.top-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  background: url('background.png') no-repeat center center;
+  background-size: cover;
+}
+
+.item {
+  position: relative;
+}
+
+/* Signs on Left and Right */
+#left .sign, #right .sign {
+  background-color: #ffdb79;
+  border: 4px solid #b3a100;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+/* Center Section */
+#center {
+  text-align: center;
+}
+
+.floating-shop {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.character {
+  width: 150px;
+}
+
+.shop-buttons {
+  margin-top: 20px;
+}
+
+.free-trial, .shop-here {
+  background-color: #f7b4d9;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+
+.free-trial:hover, .shop-here:hover {
+  background-color: #e0a1c7;
+}
+
+/* Bottom Section: Buttons Grid */
+.bottom-container {
+  padding: 40px;
+}
+
+h2 {
+  font-family: 'Chewy', cursive; /* Apply the font to headings */
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Button Styling */
+.button {
+  font-family: 'Chewy', cursive; /* Apply to buttons */
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 15px 0;
+  width: 250px; /* Ensures all buttons have the same width */
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  animation: float 2s infinite ease-in-out;
+  font-weight: bold;
+  justify-content: space-evenly;
+}
+
+/* Bouncing Animation for Fun Effect */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Fun Hover Effect */
+.button:hover {
+  background-color: #ffeb3b; /* Fun, playful yellow when hovered */
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Colorful Text for Each Button */
+.button:nth-child(1) {
+  background-color: #FFCDD2; /* Light Red */
+  color: #D32F2F; /* Dark Red */
+}
+
+.button:nth-child(2) {
+  background-color: #C5CAE9; /* Light Blue */
+  color: #3949AB; /* Dark Blue */
+}
+
+.button:nth-child(3) {
+  background-color: #F8BBD0; /* Pink */
+  color: #C2185B; /* Dark Pink */
+}
+
+.button:nth-child(4) {
+  background-color: #DCEDC8; /* Light Green */
+  color: #689F38; /* Dark Green */
+}
+
+.button:nth-child(5) {
+  background-color: #D1C4E9; /* Light Purple */
+  color: #7B1FA2; /* Dark Purple */
+}
+
+.button:nth-child(6) {
+  background-color: #FFECB3; /* Light Yellow */
+  color: #FFA000; /* Dark Yellow */
+}
+
+.button:nth-child(7) {
+  background-color: #B2EBF2; /* Light Cyan */
+  color: #00796B; /* Dark Cyan */
+}
+
+.button:nth-child(8) {
+  background-color: #FFCCBC; /* Light Orange */
+  color: #E64A19; /* Dark Orange */
+}
+
+.button:nth-child(9) {
+  background-color: #FFEBEE; /* Light Pink */
+  color: #D32F2F; /* Dark Red */
+}
+
+/* Top Section: Image Covering Entire Div */
+.top-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional background for clarity */
+}
+
+.item {
+  position: relative;
+  width: 100%; /* Ensures the image fills the entire width */
+  height: 100%; /* Ensures the image fills the entire height */
+}
+
+.full-width-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire div without distorting */
+}
+/* header, footer {
+  background-color: rgba(255, 255, 255, 0.8); 
+  position: relative;
+  z-index: 2; 
+} 
+
+footer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  text-align: center;
+  position: relative; 
+} */
+
+/* Ensure the body takes the full viewport height */
+
+/* Pushes footer to the bottom */
+main {
+  flex: 1;
+}
+
+/* Footer Styling */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+

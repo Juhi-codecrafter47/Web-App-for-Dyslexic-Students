@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <script defer src="signup-validation.js"></script>
+</head>
+<body>
+   
+    <div class="signup-container">
+        <form id="signup-form" class="signup-form" action="welcome.php" method="POST">
+            <h2>Sign Up</h2>
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                <div id="fullname-error" class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="age">Age</label>
+                <select id="age" name="age" required>
+                    <option value="5-8 years">5-8 years</option>
+                    <option value="9-12 years" selected>9-12 years</option>
+                    <option value="13-16 years">13-16 years</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div id="email-error" class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <div id="password-error" class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                <div id="confirm-password-error" class="error"></div>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <p class="have-account">Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

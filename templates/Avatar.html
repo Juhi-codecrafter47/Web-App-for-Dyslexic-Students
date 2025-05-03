@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
+    <link rel="stylesheet" href="learn.css">
+    
+    <nav>
+        <a href="/MINI%20PROJECT/Home.php">Home</a>
+        <a href="/MINI%20PROJECT/aboutdy.html">About Dyslexia</a>
+        <a href="/MINI%20PROJECT/learn.html">Learn</a>
+        <a href="/MINI%20PROJECT/progress.html">Your Progress</a>
+        <a href="/MINI%20PROJECT/about.html">About Us</a>
+        <a href="/MINI%20PROJECT/signup.html"><button class="login-btn">Login to learn</button></a>
+    </nav>
+    <style>
+        #avatar {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#avatar-img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+#speech-bubble {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  max-width: 200px;
+}
+
+.wave {
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+    </style>
+</head>
+<body>
+    <div id="avatar">
+     <img src="avatar.png" alt="Friendly Guide" id="avatar-img">
+     <div id="speech-bubble">Hi! I'm here to help you!</div>
+  </div>
+  
+  <script>
+    const avatar = document.getElementById("avatar-img");
+    const speechBubble = document.getElementById("speech-bubble");
+  
+    // Example interaction
+    setTimeout(() => {
+      speechBubble.textContent = "Let's find out how you like to learn!";
+      avatar.classList.add("wave");
+    }, 1000);
+    
+    // Add animation class (CSS animation)
+    avatar.addEventListener("click", function() {
+      speechBubble.textContent = "Great choice!";
+    });
+  </script>
+  

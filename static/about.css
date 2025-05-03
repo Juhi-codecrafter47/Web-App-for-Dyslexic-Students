@@ -1,0 +1,178 @@
+/* General body styles */
+body {
+  align-items: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin: 0;
+}
+.p-3 {
+  background-color: #a1d6b2;
+
+}
+.nav a{
+  display: flex;
+  gap: 30px;
+  color: #e8e97f;
+  font-size: 20px;
+  
+}
+.nav li {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+.btn-outline-light {
+  color: #f1f3c2;
+  border-color: black !important;
+}
+.custom-login {
+  background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+  color: white !important;
+  border-radius: 25px;
+  width: 100px;
+}   
+.custom-signup {
+  background-color: #cedf9f !important;  /* Change 'green' to your desired color */
+  color: white !important;
+  border-radius: 25px;
+  width: 100px;
+}
+
+/* Header Styles */
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-style: oblique;
+  text-decoration: wavy;
+  color: #e8b86d;
+  font-size: 30px; /* Reduced font size */
+  animation: forwards 2ms;
+}
+
+h1:hover {
+  transform: scaleX(1.1);
+}
+
+/* Secondary Header Styles */
+h2 {
+  align-items: center;
+  font-size: 24px; /* Reduced font size */
+  color: #e8b86d;
+}
+
+/* Paragraph Styles */
+p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px; /* Reduced font size */
+  color: #e8b86d;
+  align-items: center;
+}
+/* 
+/* Navigation Styles */
+/* nav {
+  background-color: #a1d6b2; /* Background color of the navbar */
+  /* padding: 15px; Padding around the navbar */ */
+  /* display: flex; Use flexbox for layout */
+  /* justify-content: space-around; Space links evenly */
+  /* align-items: center; Center links vertically */
+  /* border-bottom: 2px solid #e8b86d; Bottom border for emphasis */
+
+
+/* nav a {
+  text-decoration: none; /* Remove underline from links */
+  /* color: #f1f3c2; /* Link color */
+  /* font-size: 16px; Reduced font size */
+  /* padding: 10px 15px; Padding around links */
+  /* transition: background-color 0.3s; Smooth transition for hover effect */
+
+/* nav a:hover {
+  background-color: #e8b86d; 
+  color: #333; 
+  border-radius: 5px; 
+} */
+/* 
+nav button {
+  background-color: #e8b86d; 
+  border: none; 
+  border-radius: 5px; 
+  color: white; 
+  padding: 8px 12px; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+nav button:hover {
+  background-color: chocolate; 
+} */ 
+
+/* Button Styles */
+button {
+  width: 180px; /* Reduced width */
+  margin-right: 30px;
+  align-items: right;
+  background-color: #cedf9f;
+  color: aliceblue;
+  padding: 8px; /* Reduced padding */
+  border-style: none;
+  border-radius: 10px;
+  font-size: 14px; /* Reduced font size */
+  transition: ease-in-out;
+}
+
+button:hover {
+  width: 200px; /* Slightly reduced hover width */
+  cursor: pointer;
+  background-color: mediumaquamarine;
+}
+
+/* Info Section Styles */
+.info-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Distribute info boxes evenly */
+  margin: 20px; /* Space around the info sections */
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Fixed width for each info box */
+  text-align: center; /* Center text in info boxes */
+}
+
+.info-box img {
+  width: 100%; /* Responsive images */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .info-sections {
+      flex-direction: column; 
+      align-items: center; 
+  }
+  
+  .info-box {
+      width: 90%; 
+      margin-bottom: 20px; 
+  }
+}
+footer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background */
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Ensures it stays at the bottom */
+}
+
+/* header, footer {
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Keep a light background */
+  /* position: relative;
+  z-index: 2; Ensure they stay above the background */
+/* } */
+

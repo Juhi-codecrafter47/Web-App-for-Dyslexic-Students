@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    background-color: #f7e6b5; /* Light beige background */
+    font-family: 'Chewy', cursive; /* Funky font */
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Text Styles */
+  .text-purple {
+    color: #7a3db8; /* Purple for the title */
+  }
+  
+  h1, h2 {
+    color: #7a3db8; /* Purple for headings */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.5em;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+  
+  /* Container and Section Styling */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .bg-white {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .hint {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+  
+  /* Button Styles */
+  .hint-button {
+    margin-left: 10px;
+  }
+  
+  /* Hint Text Styling */
+  .hint-text {
+    display: none;
+    font-style: italic;
+    color: #6c757d; /* Bootstrap gray */
+  }
+  
+  /* Content Section Styling */
+  .content-section {
+    text-align: left;
+    margin-top: 30px;
+  }
+  
+  .content-section h2 {
+    font-size: 1.6em;
+    margin-top: 20px;
+  }
+  
+  .progress-bar {
+    background-color: #6f42c1;
+    font-size: 16px;
+  }
+  
+  /* Result Styling */
+  #result {
+    background-color: #9adff0; /* White background for results */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  #result h3 {
+    color: #28a745; /* Green for score */
+    font-size: 1.5em;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #dc3545; /* Red border */
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .popup h4 {
+    color: #dc3545; /* Red for title */
+  }
+  
+  .popup button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    h1, h2 {
+      font-size: 1.4em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  }
+  .correct {
+    color: green; /* Correct answer color */
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red; /* Incorrect answer color */
+    font-weight: bold;
+}
+
+/* Add additional styles if needed */

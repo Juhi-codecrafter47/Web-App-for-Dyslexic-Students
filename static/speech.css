@@ -1,0 +1,75 @@
+/* General Body Styles */
+body {
+  align-items: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin: 0;
+  background-color: #f4f4f4; /* Light background for the entire page */
+}
+
+/* Heading Styles */
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-style: oblique;
+  text-decoration: wavy;
+  color: #e8b86d;
+  animation: forwards 2ms;
+}
+
+h1:hover {
+  transform: scaleX(1.1);
+}
+
+/* Button Styles */
+#start-btn {
+  width: 200px;
+  margin: 20px 0;
+  background-color: #cedf9f;
+  color: aliceblue;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: medium;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  width: 230px;
+  background-color: mediumaquamarine;
+}
+
+/* Result Display Styles */
+#result {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  min-height: 50px; /* Minimum height for better visibility */
+  font-size: 18px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  body {
+      padding: 10px; /* Padding for smaller screens */
+  }
+  
+  h1 {
+      font-size: 24px; /* Responsive font size for heading */
+  }
+
+  #start-btn {
+      width: 100%; /* Full width on mobile */
+      margin: 10px 0; /* Reduced margin */
+  }
+
+  #result {
+      width: 100%; /* Full width for result display */
+  }
+}

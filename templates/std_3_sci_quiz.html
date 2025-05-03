@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>std_3_sci_quiz.html</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }
+        .quiz-container { background-color: #fff; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 30px; }
+        .btn-custom { font-size: 20px; padding: 10px 20px; border-radius: 10px; }
+        .result { font-size: 22px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center quiz-container">
+                <h1 class="text-success">Class 3 Science Quiz</h1>
+                <p class="lead">Test your knowledge on science topics like living things, environment, and the human body!</p>
+                
+                <form id="quizForm">
+                    <div class="mb-4">
+                        <h4>1. Which of these is a living thing?</h4>
+                        <input type="radio" name="q1" value="Rock"> Rock<br>
+                        <input type="radio" name="q1" value="Tree"> Tree<br>
+                        <input type="radio" name="q1" value="Car"> Car<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>2. What helps keep our environment clean?</h4>
+                        <input type="radio" name="q2" value="Throwing garbage on streets"> Throwing garbage on streets<br>
+                        <input type="radio" name="q2" value="Recycling waste"> Recycling waste<br>
+                        <input type="radio" name="q2" value="Cutting down trees"> Cutting down trees<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>3. What does the heart do in our body?</h4>
+                        <input type="radio" name="q3" value="Helps in digestion"> Helps in digestion<br>
+                        <input type="radio" name="q3" value="Pumps blood"> Pumps blood<br>
+                        <input type="radio" name="q3" value="Makes us breathe"> Makes us breathe<br>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary btn-custom" onclick="checkAnswers()">Submit</button>
+                </form>
+                
+                <div id="result" class="mt-4"></div>
+                <div class="mt-3">
+                    <a href="std_3_sci.html" class="btn btn-secondary btn-custom">Back to Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answers = { q1: "Tree", q2: "Recycling waste", q3: "Pumps blood" };
+            
+            for (let key in answers) {
+                const selected = document.querySelector('input[name="' + key + '"]:checked');
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
+            }
+            
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<p class="result">You scored ${score} out of 3!</p>`;
+        }
+    </script>
+</body>
+</html>

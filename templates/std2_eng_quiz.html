@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Class 2 Quiz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }
+        .quiz-container { background-color: #fff; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 30px; text-align: left; }
+        .btn-custom { font-size: 20px; padding: 10px 20px; border-radius: 10px; }
+        .result { font-size: 22px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 quiz-container">
+                <h1 class="text-primary text-center">Class 2 English Quiz</h1>
+                <p class="lead text-center">Test your knowledge of nouns, verbs, and sentence formation!</p>
+                
+                <form id="quizForm">
+                    <div class="mb-4">
+                        <h4>1. What is a noun?</h4>
+                        <input type="radio" name="q1" value="An action word"> An action word<br>
+                        <input type="radio" name="q1" value="A naming word"> A naming word<br>
+                        <input type="radio" name="q1" value="A describing word"> A describing word<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>2. Which one is a noun?</h4>
+                        <input type="radio" name="q2" value="Run"> Run<br>
+                        <input type="radio" name="q2" value="Dog"> Dog<br>
+                        <input type="radio" name="q2" value="Quickly"> Quickly<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>3. What is a verb?</h4>
+                        <input type="radio" name="q3" value="An action word"> An action word<br>
+                        <input type="radio" name="q3" value="A place"> A place<br>
+                        <input type="radio" name="q3" value="A thing"> A thing<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>4. Which word is a verb?</h4>
+                        <input type="radio" name="q4" value="Table"> Table<br>
+                        <input type="radio" name="q4" value="Jump"> Jump<br>
+                        <input type="radio" name="q4" value="Red"> Red<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>5. Which sentence is correct?</h4>
+                        <input type="radio" name="q5" value="cat the sleeps"> cat the sleeps<br>
+                        <input type="radio" name="q5" value="The cat sleeps."> The cat sleeps.<br>
+                        <input type="radio" name="q5" value="sleep cat the"> sleep cat the<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>6. Which sentence starts with a capital letter?</h4>
+                        <input type="radio" name="q6" value="john likes apples."> john likes apples.<br>
+                        <input type="radio" name="q6" value="John likes apples."> John likes apples.<br>
+                        <input type="radio" name="q6" value="john Likes Apples."> john Likes Apples.<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>7. Which of these is a noun?</h4>
+                        <input type="radio" name="q7" value="Run"> Run<br>
+                        <input type="radio" name="q7" value="School"> School<br>
+                        <input type="radio" name="q7" value="Happily"> Happily<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>8. What should a sentence end with?</h4>
+                        <input type="radio" name="q8" value="Comma"> Comma<br>
+                        <input type="radio" name="q8" value="Full stop"> Full stop<br>
+                        <input type="radio" name="q8" value="Question mark"> Question mark<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>9. Which of these is an action word?</h4>
+                        <input type="radio" name="q9" value="Read"> Read<br>
+                        <input type="radio" name="q9" value="Book"> Book<br>
+                        <input type="radio" name="q9" value="Table"> Table<br>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>10. Which of these sentences is correct?</h4>
+                        <input type="radio" name="q10" value="I like to read books."> I like to read books.<br>
+                        <input type="radio" name="q10" value="i Like To Read Books"> i Like To Read Books<br>
+                        <input type="radio" name="q10" value="I like Read Books"> I like Read Books<br>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary btn-custom" onclick="checkAnswers()">Submit</button>
+                </form>
+                
+                <div id="result" class="mt-4"></div>
+                <div class="mt-3 text-center">
+                    <a href="std2_eng.html" class="btn btn-secondary btn-custom">Back to Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answers = {
+                q1: "A naming word", q2: "Dog", q3: "An action word", 
+                q4: "Jump", q5: "The cat sleeps.", q6: "John likes apples.", 
+                q7: "School", q8: "Full stop", q9: "Read", q10: "I like to read books."
+            };
+            
+            for (let key in answers) {
+                const selected = document.querySelector('input[name="' + key + '"]:checked');
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
+            }
+            
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<p class="result">You scored ${score} out of 10!</p>`;
+        }
+    </script>
+</body>
+</html>

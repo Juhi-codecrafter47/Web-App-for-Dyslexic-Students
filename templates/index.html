@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dyslexia Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            background: #f7e6c4;;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        input[type="file"],
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f1f3c2;
+        }
+        button {
+            padding: 12px;
+            background-color: #e8b86d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f1f3f5;
+            border-radius: 8px;
+            color: #333;
+            font-size: 16px;
+            white-space: pre-line; /* To allow line breaks from \n */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dyslexia Prediction</h2>
+        
+        <!-- Form for uploading image and annotations -->
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="image-input">Upload Image:</label>
+                <input type="file" id="image-input" accept="image/*" required>
+            </div>
+            
+            <div>
+                <label for="annotations-input">Annotations (optional):</label>
+                <input type="text" id="annotations-input" placeholder="Enter annotations (comma separated)">
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+        
+        <div id="result">Prediction result will appear here.</div>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('image-input');
+            const annotationsInput = document.getElementById('annotations-input');
+            const file = fileInput.files[0];
+            const annotations = annotationsInput.value.trim() !== "" ? annotationsInput.value.split(',').map(anno => anno.trim()) : []; 
+
+            if (!file) return alert("Please upload an image.");
+
+            const reader = new FileReader();
+
+            reader.onload = async function () {
+                // Convert image to base64
+                const base64Image = reader.result.split(',')[1];
+
+                const requestData = {
+                    input: {
+                        image: base64Image,
+                        annotations: annotations.length > 0 ? annotations : null
+                    }
+                };
+
+                try {
+                    const response = await fetch('http://127.0.0.1:5001/predict', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(requestData)
+                    });
+
+                    const result = await response.json();
+                    const resultDiv = document.getElementById('result');
+
+                    if (result.prediction) {
+                        const pred = `Prediction Score: ${result.prediction.toFixed(4)}`;
+                        const anns = result.annotations_used?.length > 0 
+                            ? `\nAnnotations Considered: ${result.annotations_used.join(', ')}` 
+                            : "\nNo annotations provided.";
+                        const errors = result.detected_errors?.length > 0 
+                            ? `\nSpelling Mistakes Detected: ${result.detected_errors.join(', ')}` 
+                            : "\nNo spelling errors found.";
+
+                        resultDiv.innerText = pred + anns + errors;
+                    } else if (result.error) {
+                        resultDiv.innerText = `Error: ${result.error}`;
+                    } else {
+                        resultDiv.innerText = "Error: Unexpected response from server.";
+                    }
+                } catch (error) {
+                    document.getElementById('result').innerText = 'Error: ' + error.message;
+                }
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>

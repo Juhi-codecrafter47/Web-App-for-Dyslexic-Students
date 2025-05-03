@@ -1,0 +1,8 @@
+venv/
+venv_tf/
+tfenv/
+node_modules/
+uploads/
+__pycache__/
+*.pyc
+*.pyo

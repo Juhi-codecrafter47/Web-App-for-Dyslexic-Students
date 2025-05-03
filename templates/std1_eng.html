@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonics for Kids - Learn to Read</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- OpenDyslexic Font -->
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; /* Ensures the content is spaced out */
+            align-items: center; /* Vertically centers the content */
+            padding: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: #a1d6b2;
+            border-radius: 7px;
+        }
+        nav > a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #f1f3c2;
+            padding: 10px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav > a:not(:last-child) {
+            margin-right: 20px; /* Adds spacing between all nav links except the login button */
+        }
+
+        nav > a:last-child {
+            margin-left: auto; /* Pushes the login button to the far right */
+        }
+
+    .login-btn {
+            width: 200px;
+            background-color: #cedf9f;
+            color: aliceblue;
+            padding: 10px;
+            border-style: none;
+            border-radius: 10px;
+            font-size: medium;
+            transition: ease-in-out;
+    }
+
+
+    .login-btn:hover {
+        width: 230px;
+        cursor: pointer;
+        background-color: mediumaquamarine;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f1f3c2;
+        color: brown;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+    .content-box {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+    h1, h2, h3 {
+        color: #ff6f61;
+    }
+        .btn-custom {
+            font-size: 25px;
+            padding: 15px 30px;
+            border-radius: 15px;
+            margin: 10px;
+        }
+        .video-container, .iframe-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .text-purple { color: #6a1b9a; }
+        .text-pink { color: #e91e63; }
+        .text-green { color: #4caf50; }
+        .text-blue { color: #2196f3; }
+        .text-yellow { color: #ffeb3b; }
+    </style>
+</head>
+<body>
+    <header class="p-3">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/home.html" class="d-flex align-items-center mb-2 mb-lg-0">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="Home.php" class="nav-link px-2">Home</a></li>
+              <li><a href="aboutdy.html" class="nav-link px-2">About Dyslexia</a></li>
+              <li><a href="./speech.html" class="nav-link px-2">Speech</a></li>
+              <li><a href="homepage.html" class="nav-link px-2">Learn</a></li>
+              <li><a href="./about.html" class="nav-link px-2">About Us</a></li>
+            </ul>
+            <div class="text-end">
+              <button type="button" class="btn custom-login">Login</button>
+              <button type="button" class="btn custom-signup">Sign-up</button>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center bg-white p-5 rounded shadow content-box animate__animated animate__fadeIn">
+
+                <!-- Text to Speech Buttons -->
+                <div class="text-right mb-3">
+                    <button class="btn btn-success btn-custom" onclick="readText()">🔊 Read Aloud</button>
+                    <button class="btn btn-danger btn-custom" onclick="stopSpeech()">🛑 Stop</button>
+                </div>
+
+                <!-- Alphabet Section -->
+                <div class="content-section text-left">
+                    <h2 class="font-weight-bold text-center text-pink" style="font-size: 60px;">The Alphabet</h2>
+                    <div class="position-relative mb-4 video-container">
+                        <video width="100%" height="400px" controls>
+                            <source src="../static/api/Video1 - Made with Clipchamp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p style="font-size: 25px;">The alphabet has 26 letters. We use these letters to make words. Let's learn them together!</p>
+                    <p class="text-pink" style="font-size: 30px;"><strong>A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z</strong></p>
+                    <p style="font-size: 25px;"><span class="text-pink">Example:</span> "<strong>A</strong> for Apple, <strong>B</strong> for Ball, <strong>C</strong> for Cat."</p>
+                </div>
+
+                <br><br>
+
+                <!-- Phonics Section -->
+                <h2 class="text-purple mb-4" style="font-size: 60px;">Phonics Fun</h2>
+                <div class="position-relative mb-4 iframe-container">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/hq3yfQnllfQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 25px;">Phonics helps us learn how to read. We match letters to their sounds. For example, <strong>A</strong> says "a" like in "apple."</p>
+
+                <!-- Sounds Section -->
+                <div class="content-section text-left">
+                    <h2 class="font-weight-bold text-green" style="font-size: 50px;">Letter Sounds</h2>
+                    <p style="font-size: 25px;">Every letter makes a sound. Let's practice:</p>
+                    <ul style="font-size: 25px;">
+                        <li><strong>A</strong> says "a" like in "ant."</li>
+                        <li><strong>B</strong> says "b" like in "ball."</li>
+                        <li><strong>C</strong> says "c" like in "cat."</li>
+                    </ul>
+                </div>
+
+                <br><br>
+
+                <!-- Words Section -->
+                <h2 class="text-blue mb-4" style="font-size: 60px;">Simple Words</h2>
+                <div class="position-relative mb-4 iframe-container">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/d0Hq0fjT3r4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 25px;">Let's read some simple words: <strong>Cat, Dog, Sun, Hat, Pen, Cup.</strong></p>
+
+                <!-- Sentences Section -->
+                <div class="content-section text-left">
+                    <h2 class="font-weight-bold text-yellow" style="font-size: 50px;">Simple Sentences</h2>
+                    <p style="font-size: 25px;">Let's make simple sentences:</p>
+                    <ul style="font-size: 25px;">
+                        <li>The cat is fat.</li>
+                        <li>I see a dog.</li>
+                        <li>Sun is hot.</li>
+                    </ul>
+                </div>
+                <div class="assignment">
+                    <h2>Assignment 1: Handwriting Analysis</h2>
+                    <p>Write a paragraph about your favorite book on paper, take a clear picture, and upload it for analysis.</p>
+                    <a href="./index.html">
+                        <button>Upload Assignment</button>
+                    </a>
+                </div>
+                <!-- Button for Quiz -->
+                <div class="text-center mt-5">
+                    <button class="btn btn-primary btn-custom" onclick="window.location.href='std1_eng_quiz.html';">Take the Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Web Speech API for Text to Speech -->
+    <script>
+        let speechSynthesisUtterance;
+
+        function readText() {
+            const contentBox = document.querySelector('.content-box');
+            const textElements = contentBox.querySelectorAll('p, h1, h2, h3, strong, li');
+            let fullText = '';
+            textElements.forEach(el => fullText += el.textContent + ' ');
+
+            speechSynthesisUtterance = new SpeechSynthesisUtterance(fullText);
+            speechSynthesisUtterance.pitch = 1;
+            speechSynthesisUtterance.rate = 1;
+            speechSynthesisUtterance.volume = 1;
+
+            window.speechSynthesis.speak(speechSynthesisUtterance);
+        }
+
+        function stopSpeech() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+        }
+    </script>
+    <script src="../static/logger.js"></script>
+
+</body>
+</html>

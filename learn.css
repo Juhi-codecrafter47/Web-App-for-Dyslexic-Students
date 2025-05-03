@@ -1,0 +1,169 @@
+/* General Styles */
+body, h1, h2, h3, h4, p, button {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+nav {
+    display: flex;
+    justify-content: space-between; /* Ensures the content is spaced out */
+    align-items: center; /* Vertically centers the content */
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #a1d6b2;
+    border-radius: 7px;
+}
+
+nav > a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f1f3c2;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav > a:not(:last-child) {
+    margin-right: 20px; /* Adds spacing between all nav links except the login button */
+}
+
+nav > a:last-child {
+    margin-left: auto; /* Pushes the login button to the far right */
+}
+
+.login-btn {
+    width: 200px;
+    background-color: #cedf9f;
+    color: aliceblue;
+    padding: 10px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: medium;
+    transition: ease-in-out;
+}
+
+.login-btn:hover {
+    width: 230px;
+    cursor: pointer;
+    background-color: mediumaquamarine;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f3c2;
+    color: brown;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 50px;
+}
+
+.profile-icon {
+    width: 50px;
+    border-radius: 50%;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Subject Categories */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.subject-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+}
+
+.subject-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Subject-Specific Content */
+#subject-content {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.learning-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn, .back-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.action-btn:hover, .back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f3c2;
+    color: brown;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

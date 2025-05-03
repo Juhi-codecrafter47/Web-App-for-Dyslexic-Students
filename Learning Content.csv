@@ -1,0 +1,28 @@
+id,Title,keywords,Difficulty_level,Subject
+1,Alphabets,"['alphabets', 'A', 'Z', 'B', 'C']",easy,English
+2,"Nouns, Verbs and Adjectives","['parts', 'of', 'sentences', 'nouns', 'verbs', 'adjectives']",easy,English
+3,Phonics Fun,"['phonics', 'letters', 'sound']",easy,English
+4,Spelling Song,"['spell', 'spelling', 'song', 'words', 'simple']",medium,English
+5,Word Game,"['word', 'game', 'move', 'letters']",medium,English
+6,Sentence Building,"['sentence', 'words', 'build', 'arrange']",medium,English
+7,Rhyming Words,"['rhyme', 'words', 'match', 'sound']",easy,English
+8,Counting Fun,"['count', 'fun', 'numbers']",easy,Maths
+9,Addition Fun,"['addition', 'add', 'fun', 'plus', 'numbers']",easy,Maths
+10,Shapes and Patterns,"['shapes', 'patterns', 'circle', 'triangle']",easy,Maths
+11,Subtraction Fun,"['subtract', 'fun', 'minus', 'numbers']",easy,Maths
+12,Number Patterns,"['number', 'patterns']",medium,Maths
+13,Place value,"['place', 'value', 'numbers']",medium,Maths
+14,Word problems,"['problems', 'word', 'numbers', 'count']",medium,Maths
+15,Multiplication Fun,"['multiply', 'fun', 'numbers', 'product']",medium,Maths
+16,Division Fun,"['division', 'divide', 'fun', 'numbers']",medium,Maths
+17,Fractions Fun,"['fractions', 'fun', 'numerator', 'denominator']",medium,Maths
+18,Animals Fun,"['animals', 'fun']",easy,Science
+19,Plants Fun,"['plants', 'trees', 'fun']",easy,Science
+20,Human Body Fun,"['human', 'body', 'fun']",easy,Science
+21,Weather Fun,"['weather', 'fun', 'climate']",easy,Science
+22,The Solar System,"['sun', 'earth', 'solar', 'system', 'space']",medium,Science
+23,Simple Machines,"['simple', 'machines']",easy,Science
+24,The Water Cycle,"['water', 'cycle', 'rain']",medium,Science
+25,Electricity and Magnetism,"['electricity', 'magnet', 'current']",hard,Science
+26,Ecosystems,"['living', 'being', 'environment', 'ecosystem']",medium,Science
+27,The Human Body,"['human', 'body', 'parts', 'organs']",medium,Science
