@@ -62,11 +62,11 @@ To create an inclusive educational platform that addresses the unique learning c
 
 ---
 
-## 🤝 Team
+## 🤝 Team 
 
-- **Juhi Birare** – Lead Developer  
-- **Samruddhi Jatkar** – Co-Developer  
-- **Aiman Dabir** – UI/UX and Integration  
+- **Juhi Birare** – Leader
+- **Samruddhi Jatkar** – Member  
+- **Aiman Dabir** – Member  
 - **Mentor**: Dr. Gresha Bhatia
 
 ---
